@@ -1,0 +1,11 @@
+Test Scenarios for Martha’s Good Eats Application
+1. Customer Web Page Listing:
+            Test Case: Verify that as a Martha’s Good Eats customer, I can view a web page listing all items from the menu table in the database.
+2. Business Partner API Fetch:
+            Test Case: Validate that as a Martha’s Good Eats business partner, I can retrieve all menu items from the database via a REST API, with records returned in JSON format.
+3. Staff Member Add New Item:
+            Test Case: Ensure that as a Martha’s Good Eats staff member, I can access a web page to add a new item to the menu table in the database.
+4. Edit Existing Item:
+            Test Case: Verify that a staff member can successfully edit an existing item in the menu table, updating its details as required.
+5. Delete Item from Menu:
+            Test Case: Confirm that a staff member can delete an item from the menu table, ensuring it is removed from the database and no longer displayed on the website.

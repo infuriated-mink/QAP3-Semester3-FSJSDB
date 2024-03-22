@@ -1,0 +1,56 @@
+SQL Script for Martha's Good Eats Database Setup
+
+-- Purpose: Create a database for the QAP service
+
+CREATE DATABASE marthasgoodeats
+WITH
+OWNER = postgres
+ENCODING = 'UTF8'
+CONNECTION LIMIT = -1
+TEMPLATE = False;
+
+-- Create the Products table
+-- This table will store all the products that are available for purchase
+
+DROP TABLE IF EXISTS Products;
+
+CREATE TABLE Products (
+  productID SERIAL PRIMARY KEY,
+  productName VARCHAR(255) NOT NULL,
+  productDescription TEXT,
+  productPrice DECIMAL(10, 2) NOT NULL,
+  stockQuantity INTEGER NOT NULL,
+  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Insert data into the Products table
+
+INSERT INTO Products (productName, productDescription, productPrice, stockQuantity)
+VALUES
+('chocolate chip cookie', 'decadent chocolate chip cookies', 4.00, 67),
+('brownie with icing', 'delicious brownies with chocolate icing', 15.00, 89),
+('plain scones', 'buttery scones', 19.00, 29),
+('chocolate cake', 'delicious chocolate cake', 16.00, 88),
+('apple pie', 'warm homemade apple pie', 20.00, 62),
+('carrot cake', 'moist carrot cake', 19.00, 20);
+
+-- Create a new product
+
+INSERT INTO Products (productName, productDescription, productPrice, stockQuantity)
+VALUES ('new_product_name', 'new_product_description', 25.00, 50);
+
+-- Read a product by its id
+
+SELECT * FROM Products WHERE productID = $1;
+
+-- Read all products from the database
+
+SELECT * FROM Products;
+
+-- Update a product in the database
+
+UPDATE Products SET productName = $2, productDescription = $3, productPrice = $4, stockQuantity = $5 WHERE productID = $1;
+
+-- Delete a product from the database
+
+DELETE FROM Products WHERE productID = $1;
