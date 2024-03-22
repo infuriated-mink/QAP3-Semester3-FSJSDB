@@ -1,0 +1,28 @@
+{
+  "name": "qap3-semester3-fsjsdb",
+  "version": "1.0.0",
+  "description": "The focus of this QAP is the creation of a FullStack-Database application using Node, Express, EJS, and PostgreSQL.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infuriated-mink/QAP3-Semester3-FSJSDB.git"
+  },
+  "author": "Vanessa Rice",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/infuriated-mink/QAP3-Semester3-FSJSDB/issues"
+  },
+  "homepage": "https://github.com/infuriated-mink/QAP3-Semester3-FSJSDB#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "express": "^4.19.1",
+    "method-override": "^3.0.0",
+    "nodemon": "^3.1.0",
+    "pg": "^8.11.3"
+  }
+}
