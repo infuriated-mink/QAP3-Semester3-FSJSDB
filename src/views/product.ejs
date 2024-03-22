@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Product</h1>
+    </header>
+    <main>
+      <div class="product">
+        <h3><%= product.productname %></h3>
+        <p><%= product.productdescription %></p>
+        <% if (!isNaN(parseFloat(product.productprice))) { %>
+        <p>Price: $<%= parseFloat(product.productprice).toFixed(2) %></p>
+        <% } else { %>
+        <p>Price: Not available</p>
+        <% } %>
+      </div>
+      <form>
+        <button formaction="/products/<%= product.productid %>/update" type="submit">Update Product</button>
+      </form>
+    </main>
+  </body>
+</html>

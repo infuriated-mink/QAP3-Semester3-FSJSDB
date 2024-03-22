@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const productsDal = require('../src/services/pg.products.dal');
+const productsDal = require('../services/pg.products.dal');
 
 // GET all products
 router.get('/', async (req, res) => {
